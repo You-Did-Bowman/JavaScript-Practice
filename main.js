@@ -130,7 +130,7 @@ product.discountedPrice = product.price / 2;
 console.log(`SALE: the ${product.color} ${product.brand} ${product.type} costs now only ${product.price} instead of ${product.discountedPrice}!`);
 
 /* 
------------------------------- Objects: Task 34 ------------------------------
+------------------------------ Objects: Task 4 ------------------------------
 Given the object below, add a new property to it called fullName.
 The property should combine the values from firstName and lastName, separated by a space.
 const person = {
@@ -155,3 +155,26 @@ const person2 = {
 
 person2["fullName"] = person2.firstName + " " + person2.lastName;
 
+/* 
+------------------------------ Objects: Task 5 ------------------------------
+Given the object below, modify the value of the property city so that the first letter is correctly capitalised.
+const person = {
+    firstName: "Sylvia",
+    lastName: "Sun",
+    city: "london"
+};
+IMPORTANT: try to use and modify the current value of city rather than manually typing London.
+
+Expected output:
+{
+    firstName: "Sylvia",
+    lastName: "Sun",
+    city: "London"
+};
+*/
+const person3 = {
+    firstName: "Sylvia",
+    lastName: "Sun",
+    city: "london"
+};
+person3.city = person3.city[0].toUpperCase() + person3.city.slice(1);
