@@ -20,36 +20,36 @@ const person5 = new Person("Jane", 25, "Designer");
 
 // Using Object.create() Method
 const person6 = Object.create(null);
-person3.name = "Mike";
-person3.age = 35;
-person3.profession = "Engineer";
+person6.name = "Mike";
+person6.age = 35;
+person6.profession = "Engineer";
 
 // ***** Exercise 2: Accessing Object Properties *****
-console.log(person1.name); // Output: John
-console.log(person2["age"]); // Output: 25
+console.log(person4.name); // Output: John
+console.log(person5["age"]); // Output: 25
 
 // ***** Exercise 3: Modifying Object Properties *****
-person1.age = 32;
-person2["profession"] = "Manager";
+person4.age = 32;
+person5["profession"] = "Manager";
 
 // ***** Exercise 4: Adding New Properties *****
-person1.location = "New York";
-person2["salary"] = 60000;
+person4.location = "New York";
+person5["salary"] = 60000;
 
 // ***** Exercise 5: Iterating Through Object Properties *****
   // Using for...in loop
-  for (let key in person1) {
-    console.log(`${key}: ${person1[key]}`);
+  for (let key in person4) {
+    console.log(`${key}: ${person4[key]}`);
   };
   
   // Using Object.keys() method
-  Object.keys(person2).forEach(key => {
-    console.log(`${key}: ${person2[key]}`);
+  Object.keys(person5).forEach(key => {
+    console.log(`${key}: ${person5[key]}`);
   });
   
 // ***** Exercise 6: Checking Property Existence *****
-console.log("name" in person1); // Output: true
-console.log(person3.hasOwnProperty("salary")); // Output: false
+console.log("name" in person4); // Output: true
+console.log(person6.hasOwnProperty("salary")); // Output: false
   
 // ***** Exercise 7: Deleting Properties *****
 delete person1.location;
