@@ -55,6 +55,7 @@ const book = {
     price: 19.95,
     read: false
 };
+
 Expected output:
 {
     title: "A Smarter Way to Learn JavaScript",
@@ -84,6 +85,7 @@ const person = {
     lastName: "Martin",
     age: 27
 };
+
 Expected output:
 {
     firstName: "Martha",
@@ -112,6 +114,7 @@ const product = {
     discountedPrice: 22,
 };
 IMPORTANT: when modifying discountedPrice, make sure to use the property price to calculate the new value, rather than typing 22 directly.
+
 Expected output:
 SALE: the green Dolphin hat costs now only 11€ instead of 22€! 
 */
@@ -126,4 +129,29 @@ product.discountedPrice = product.price / 2;
 
 console.log(`SALE: the ${product.color} ${product.brand} ${product.type} costs now only ${product.price} instead of ${product.discountedPrice}!`);
 
+/* 
+------------------------------ Objects: Task 34 ------------------------------
+Given the object below, add a new property to it called fullName.
+The property should combine the values from firstName and lastName, separated by a space.
+const person = {
+    firstName: "Jim",
+    lastName: "Jameson",
+    age: 37
+};
+
+Expected output:
+{
+    firstName: "Jim",
+    lastName: "Jameson",
+    age: 37,
+    fullName: "Jim Jameson"
+};
+*/
+const person2 = {
+    firstName: "Jim",
+    lastName: "Jameson",
+    age: 37
+};
+
+person2["fullName"] = person2.firstName + " " + person2.lastName;
 
