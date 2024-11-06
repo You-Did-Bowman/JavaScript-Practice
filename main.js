@@ -130,7 +130,7 @@ product.discountedPrice = product.price / 2;
 console.log(`SALE: the ${product.color} ${product.brand} ${product.type} costs now only ${product.price} instead of ${product.discountedPrice}!`);
 
 /* 
------------------------------- Objects: Task 34 ------------------------------
+------------------------------ Objects: Task 4 ------------------------------
 Given the object below, add a new property to it called fullName.
 The property should combine the values from firstName and lastName, separated by a space.
 const person = {
