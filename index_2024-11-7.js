@@ -32,9 +32,9 @@ const addProduct = (product) => {
     newCart.push(product);
     return newCart;
 };
- let addNewProduct = addProduct(hatProduct);
+let addNewProduct = addProduct(hatProduct);
 
- console.log(addNewProduct); 
+console.log(addNewProduct); 
 /* OUTPUT:
  [
   { type: 't-shirt', price: 19, color: 'green' }, 
@@ -43,7 +43,7 @@ const addProduct = (product) => {
 ] 
 */
 
- console.log(cart);
+console.log(cart);
 /* 
 OUTPUT:
 [
@@ -77,10 +77,10 @@ const tasks = [
   },
 ];
 
-const newTasks = [...tasks];
+const newTasks = [...tasks]; // this inside the function
 
 const finishTask = (array) => {
-    newTasks.pop();
+    newTasks.pop(); // comment here 
     return newTasks
 };
 let newTaksList = finishTask(tasks);
@@ -116,7 +116,7 @@ const person = {
   age: 13,
 };
 
-const newPerson = { ...person };
+const newPerson = { ...person }; // this should be in the function
 
 const addFullName = (obj) => {
     newPerson["fullName"] = obj.firstName + " " + obj.lastName;
@@ -166,18 +166,21 @@ const products = [
   },
 ];
 
-const newProducts = structuredClone(products);
+// this should be in the function
 
 const applyDiscount = (arr) => {
+  const newProducts = structuredClone(arr);
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].price > 100) {
       newProducts[i]["discount"] = 20;
       newProducts[i]["discountedPrice"] =
-        newProducts[i].price - (newProducts[i].price * newProducts[i].discount) / 100;
+        newProducts[i].price -
+        (newProducts[i].price * newProducts[i].discount) / 100;
     } else {
       newProducts[i]["discount"] = 15;
       newProducts[i]["discountedPrice"] =
-        newProducts[i].price - (newProducts[i].price * newProducts[i].discount) / 100;
+        newProducts[i].price -
+        (newProducts[i].price * newProducts[i].discount) / 100;
     }
   }
   return newProducts;
@@ -221,4 +224,31 @@ OUTPUT:
   { type: 'shirt', price: 32, color: 'white' }
 ]
 */
+
+// ------------------------- CODEX TASKS -------------------------
+/* 
+We are running a swag raffle in the Codédex community and need to return 10 of the same number by picking random numbers between 0 - 99. 🏆
+
+Define a count variable at 0 and a targetNumber that is randomly set between 0 and 99.
+
+Run a while loop until count is equal to 10. Inside the loop, set a drawNumber variable to a random number between 0 and 99.
+
+    If drawNumber is equal to targetNumber, increment the count by 1 and log "Match".
+    Otherwise, do not increment the count and log "No Match".
+
+Outside the loop, log a message indicating the targetNumber was drawn 10 times:
+*/
+let count = 0;
+let targetNumber = Math.floor(Math.random() * 100)
+
+while (count != 10) {
+  let drawNumber = Math.floor(Math.random() * 100);
+  if (drawNumber === targetNumber) {
+    count++;
+    console.log("Match");
+  }
+  console.log("No Match");
+}
+
+console.log(`The number ${targetNumber} was found 10 times`);
 
