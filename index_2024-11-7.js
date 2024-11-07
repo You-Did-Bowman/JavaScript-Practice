@@ -99,30 +99,13 @@ console.log(person); // { firstName: 'James', lastName: 'Ensor', age: 13 }
 console.clear();
 
 /* -------------------------- Task 4 --------------------------
-Given the array of product objects:
-const products = [
-{
-type: "t-shirt",
-price: 19,
-color: "green",
-},
-{
-type: "jeans",
-price: 27,
-color: "blue",
-},
-{
-type: "shirt",
-price: 32,
-color: "white",
-},
-...
-];
+Given the array of product objects.
 
 Create a function called applyDiscount that takes in input an array of product objects and a discount value.
 The function should apply the discount to all the products in the array.
 The function then returns the array with the discounted prices.
-: the original array should not be modified.
+-> the original array should not be modified.
+
 Formula to calculate a discount:
 discountedPrice = price - (price * discount / 100);
 
@@ -132,3 +115,67 @@ discountedPrice = price - (price * discount / 100);
 
 15% discount of 70€:
 70 - (70 * 15 / 100) -> 70 - (1050 / 100) -> 70 - 10.5 -> 59.5 */
+
+const products = [
+  {
+    type: "t-shirt",
+    price: 190,
+    color: "green",
+  },
+  {
+    type: "jeans",
+    price: 27,
+    color: "blue",
+  },
+  {
+    type: "shirt",
+    price: 32,
+    color: "white",
+  },
+];
+
+const newProducts = [...products];
+const applyDiscount = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].price > 100) {
+      arr[i]["discount"] = 20;
+      arr[i]["discountedPrice"] =
+        arr[i].price - (arr[i].price * arr[i].discount) / 100;
+    } else {
+      arr[i]["discount"] = 15;
+      arr[i]["discountedPrice"] =
+        arr[i].price - (arr[i].price * arr[i].discount) / 100;
+    }
+  }
+  return newProducts;
+};
+
+let discountedProducts = applyDiscount(products);
+console.log(discountedProducts);
+/* 
+OUTPUT:
+[
+  {
+    type: 't-shirt',
+    price: 190,
+    color: 'green',
+    discount: 20,
+    discountedPrice: 152
+  },
+  {
+    type: 'jeans',
+    price: 27,
+    color: 'blue',
+    discount: 15,
+    discountedPrice: 22.95
+  },
+  {
+    type: 'shirt',
+    price: 32,
+    color: 'white',
+    discount: 15,
+    discountedPrice: 27.2
+  }
+]
+*/
+
