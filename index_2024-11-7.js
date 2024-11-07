@@ -5,6 +5,8 @@ Create a function called addProduct that takes the cart array and the hat produc
 The function should add the new product at the end of the array and return the updated cart.
 Make sure that the original cart is not modified. So, after calling the function, cart still has only 2 products and the function returns a new array with 3 products. */
 
+// NOTE: Hier wird der Array ergänzt bzw. verändert, daher reicht eine shallow copy - die objects werden nicht verändert -> nach der Ergänzung des "hat" bleibt "cart" unangetastet
+
 const cart = [
   {
     type: "t-shirt",
@@ -31,10 +33,24 @@ const addProduct = (product) => {
     return newCart;
 };
  let addNewProduct = addProduct(hatProduct);
- console.log(addNewProduct); // [{ type: 't-shirt', price: 19, color: 'green' }, { type: 'jeans', price: 27, color: 'blue' }, { type: 'hat', price: 15, color: 'pink' }]
- console.log(cart); //[{ type: 't-shirt', price: 19, color: 'green' }, { type: 'jeans', price: 27, color: 'blue' }]
- 
 
+ console.log(addNewProduct); 
+/* OUTPUT:
+ [
+  { type: 't-shirt', price: 19, color: 'green' }, 
+  { type: 'jeans', price: 27, color: 'blue' }, 
+  { type: 'hat', price: 15, color: 'pink' }
+] 
+*/
+
+ console.log(cart);
+/* 
+OUTPUT:
+[
+  { type: 't-shirt', price: 19, color: 'green' }, 
+  { type: 'jeans', price: 27, color: 'blue' }
+] 
+*/
 
 /* -------------------------- Task 2 --------------------------
 Given an array tasks containing a series of objects.
@@ -68,8 +84,23 @@ const finishTask = (array) => {
     return newTasks
 };
 let newTaksList = finishTask(tasks);
-console.log(newTaksList); //[{ task: 'clean apartment', priority: 5 }, { task: 'learn objects', priority: 2 }]
-console.log(tasks); // [{ task: 'clean apartment', priority: 5 }, { task: 'learn objects', priority: 2 }, { task: 'practice JavaScript', priority: 1 }]
+
+console.log(newTaksList); 
+/* 
+OUTPUT;
+[
+  { task: 'clean apartment', priority: 5 }, 
+  { task: 'learn objects', priority: 2 }
+] */
+console.log(tasks);
+
+/* 
+OUTPUT:
+[
+  { task: 'clean apartment', priority: 5 }, 
+  { task: 'learn objects', priority: 2 }, 
+  { task: 'practice JavaScript', priority: 1 }
+] */
 
 
 /* -------------------------- Task 3 --------------------------
@@ -93,10 +124,8 @@ const addFullName = (obj) => {
 }
 
 let updatedPerson = addFullName(person);
-console.log(updatedPerson); // {firstName: 'James', lastName: 'Ensor', age: 13, fullName: 'James Ensor'}
-console.log(person); // { firstName: 'James', lastName: 'Ensor', age: 13 }
-
-console.clear();
+console.log(updatedPerson); // {firstName: 'James', lastName: 'Ensor', age: 13, fullName: 'James Ensor'} 
+console.log(person);// { firstName: 'James', lastName: 'Ensor', age: 13 }
 
 /* -------------------------- Task 4 --------------------------
 Given the array of product objects.
@@ -116,6 +145,9 @@ discountedPrice = price - (price * discount / 100);
 15% discount of 70€:
 70 - (70 * 15 / 100) -> 70 - (1050 / 100) -> 70 - 10.5 -> 59.5 */
 
+//NOTE: Hier mag ich die objects in dem array verändern. Daher muss ich eine deep copy erstellen, damit "products" unangetastet bleibt. 
+// structuredClone(value) erstellt eine deep copy mit allem was in dem array ist :3
+
 const products = [
   {
     type: "t-shirt",
@@ -134,17 +166,18 @@ const products = [
   },
 ];
 
-const newProducts = [...products];
+const newProducts = structuredClone(products);
+
 const applyDiscount = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].price > 100) {
-      arr[i]["discount"] = 20;
-      arr[i]["discountedPrice"] =
-        arr[i].price - (arr[i].price * arr[i].discount) / 100;
+      newProducts[i]["discount"] = 20;
+      newProducts[i]["discountedPrice"] =
+        newProducts[i].price - (newProducts[i].price * newProducts[i].discount) / 100;
     } else {
-      arr[i]["discount"] = 15;
-      arr[i]["discountedPrice"] =
-        arr[i].price - (arr[i].price * arr[i].discount) / 100;
+      newProducts[i]["discount"] = 15;
+      newProducts[i]["discountedPrice"] =
+        newProducts[i].price - (newProducts[i].price * newProducts[i].discount) / 100;
     }
   }
   return newProducts;
@@ -176,6 +209,16 @@ OUTPUT:
     discount: 15,
     discountedPrice: 27.2
   }
+]
+*/
+
+console.log(products);
+/* 
+OUTPUT:
+[
+  { type: 't-shirt', price: 190, color: 'green' },
+  { type: 'jeans', price: 27, color: 'blue' },
+  { type: 'shirt', price: 32, color: 'white' }
 ]
 */
 
