@@ -280,8 +280,6 @@ for (let i = 1; i <= limit; i++) {
 
 console.log(total);
 
-console.clear();
-
 /* 
 ------------------------------ DICE DOUBLE ------------------------------
 If you roll two dice, the chance that both of them come up with the same value is slightly less than 17%. 🎲 🎲
@@ -304,18 +302,45 @@ Number of rolls: 1
 
 Note: Make sure to use console.log() to match the output shown above.
 */
-let die1 = Math.ceil(Math.random() * 6);
-let die2 = Math.ceil(Math.random() * 6);
+let die1 = Math.floor(Math.random() * 6) + 1;
+let die2 = Math.floor(Math.random() * 6) + 1;
 let numberOfRolls = 0;
 
-while (die1 != die2) {
-    die1 = Math.ceil(Math.random() * 6);
-    die2 = Math.ceil(Math.random() * 6);
-    numberOfRolls++;
-    console.log(`
-      Roll1: ${die1}
-      Roll2: ${die2}`);
+while (die1 !== die2) {
+  console.log(`Roll 1: ${die1}`);
+  console.log(`Roll 2: ${die2}`);
+  die1 = Math.floor(Math.random() * 6) + 1;
+  die2 = Math.floor(Math.random() * 6) + 1;
+  numberOfRolls++;
 }
-console.log(`
-  Number of rolls: ${numberOfRolls}`);
 
+console.log(`Roll 1: ${die1}`);
+console.log(`Roll 2: ${die2}`);
+console.log(`Number of rolls: ${numberOfRolls}`);
+
+/* 
+------------------------------ FIBONACCI SEQUENCE ------------------------------
+There's strength in numbers, but there's also beauty in them!
+
+The Fibonacci sequence is a special list of numbers where each one is the sum of the two previous numbers (after 0 and 1):
+0,1,1,2,3,5,8,13,21,34
+
+Examples of the sequence are found in nature, including tree branches and pine cone scales. 🌲
+
+Use a for loop to log the first 10 Fibonacci numbers.
+
+The first two numbers, 0 and 1, can be saved to firstFib and secondFib variables and logged directly to the console. Use a loop to generate a nextFib variable for the next Fibonacci number.
+
+Note: Inside the loop, make sure to properly reassign firstFib and secondFib after generating the next number.
+  */
+let firstFib = 0;
+let secondFib = 1;
+console.log(firstFib);
+console.log(secondFib);
+
+for (let i = 1; i < 9; i++) {
+  let nextFib = firstFib + secondFib;
+  firstFib = secondFib;
+  secondFib = nextFib;
+  console.log(nextFib);
+}
