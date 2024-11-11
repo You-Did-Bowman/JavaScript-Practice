@@ -46,8 +46,6 @@ console.log(firstName); // John
 console.log(age); // 30
 console.log(isAdmin); // false
 
-console.clear();
-
 /**
 Exercise 4
 Rewrite the code below to use array destructuring instead of assigning each value to a variable.
@@ -60,60 +58,52 @@ let [personAge, fName, lName ] = person;
 
 console.log(`Person - Age: ${personAge}, Name: ${fName} ${lName}`);
 
-
-
 /** 
 Exercise 5
 Rewrite the code below to use array destructuring instead of assigning each value to a variable.
 Make sure not to have unused variables.
 Hint: https://untangled.io/in-depth-es6-destructuring-with-assembled-avengers
 */
-/* {
-  console.log("EXERCISE 5");
+console.log("EXERCISE 5");
 
-  let person = ["Chris", 12, "Owen"];
+let person2 = ["Chris", 12, "Owen"];
 
-  let firstName = person[0];
-  let lastName = person[2];
+let [nameFirst, , nameLast] = person2;
 
-  console.log(`Name: ${firstName} ${lastName}`);
-  console.log();
-} */
+console.log(`Name: ${nameFirst} ${nameLast}`);
+
 
 /** 
 Exercise 6
 Using Array Destructuring get the last name from the array. 
 Hint: https://untangled.io/in-depth-es6-destructuring-with-assembled-avengers
 */
-/* {
-  console.log("EXERCISE 6");
+console.log("EXERCISE 6");
 
-  const students = ['Christina', 'Jon', 'Alexandare'];
+const students = ['Christina', 'Jon', 'Alexandare'];
 
-  // Write your code here
-  const [] = students;
+// Write your code here
+const [name1, name2, name3] = students;
 
-  console.log(lastName);
-  console.log();
-} */
+console.log(name3);
+
+console.clear();
 
 /**
 Exercise 7
 Using Array Destructuring get all of the names from this Nested Array
 Hint: https://untangled.io/in-depth-es6-destructuring-with-assembled-avengers
 */
-/* {
-  console.log("EXERCISE 7");
+console.log("EXERCISE 7");
 
-  const moreStudents = [
+const moreStudents = [
     'Chris', 
     ['Ahmad', 'Antigoni'], 
     ['Toby', 'Sam']
-  ];
+];
 
-  // Write your code here
-  const [] = moreStudents;
+// Write your code here
+const [student1, [student2, student3], [student4, student5]
+] = moreStudents;
 
-  console.log(student1, student2, student3, student4, student5);
-  console.log();
-} */
+console.log(student1, student2, student3, student4, student5);
