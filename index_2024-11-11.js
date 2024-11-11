@@ -58,8 +58,6 @@ let [personAge, fName, lName ] = person;
 
 console.log(`Person - Age: ${personAge}, Name: ${fName} ${lName}`);
 
-console.clear();
-
 /** 
 Exercise 5
 Rewrite the code below to use array destructuring instead of assigning each value to a variable.
@@ -74,23 +72,22 @@ let [nameFirst, , nameLast] = person2;
 
 console.log(`Name: ${nameFirst} ${nameLast}`);
 
+console.clear();
 
 /** 
 Exercise 6
 Using Array Destructuring get the last name from the array. 
 Hint: https://untangled.io/in-depth-es6-destructuring-with-assembled-avengers
 */
-/* {
-  console.log("EXERCISE 6");
+console.log("EXERCISE 6");
 
-  const students = ['Christina', 'Jon', 'Alexandare'];
+const students = ['Christina', 'Jon', 'Alexandare'];
 
-  // Write your code here
-  const [] = students;
+// Write your code here
+const [name1, name2, name3] = students;
 
-  console.log(lastName);
-  console.log();
-} */
+console.log(name3);
+
 
 /**
 Exercise 7
