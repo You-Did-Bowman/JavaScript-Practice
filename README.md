@@ -1,7 +1,7 @@
 # JavaScript-Practice
 
 ## About The Project
-This repo contains tasks abotu JavaScript that I am completing in addition to my further training at DCI. I can find the tasks on various pages on the Internet. 
+This repo contains tasks about JavaScript that I am completing in addition to my further training at DCI. I can find the tasks on various pages on the Internet. 
 <br><br>
 My most common sources are
 
