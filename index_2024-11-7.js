@@ -7,6 +7,8 @@ Make sure that the original cart is not modified. So, after calling the function
 
 // NOTE: Hier wird der Array ergänzt bzw. verändert, daher reicht eine shallow copy - die objects werden nicht verändert -> nach der Ergänzung des "hat" bleibt "cart" unangetastet
 
+console.log("TASK 1");
+
 const cart = [
   {
     type: "t-shirt",
@@ -42,15 +44,7 @@ console.log(addNewProduct);
   { type: 'hat', price: 15, color: 'pink' }
 ] 
 */
-
-console.log(cart);
-/* 
-OUTPUT:
-[
-  { type: 't-shirt', price: 19, color: 'green' }, 
-  { type: 'jeans', price: 27, color: 'blue' }
-] 
-*/
+console.log();
 
 /* -------------------------- Task 2 --------------------------
 Given an array tasks containing a series of objects.
@@ -61,6 +55,7 @@ Create a function called finishTask that:
 - returns the updated array
 
 The original task array must not be modified. */
+console.log("TASK 2");
 
 const tasks = [
   {
@@ -92,16 +87,7 @@ OUTPUT;
   { task: 'clean apartment', priority: 5 }, 
   { task: 'learn objects', priority: 2 }
 ] */
-console.log(tasks);
-
-/* 
-OUTPUT:
-[
-  { task: 'clean apartment', priority: 5 }, 
-  { task: 'learn objects', priority: 2 }, 
-  { task: 'practice JavaScript', priority: 1 }
-] */
-
+console.log();
 
 /* -------------------------- Task 3 --------------------------
 Given an object person.
@@ -109,6 +95,7 @@ Given an object person.
 Create a function called addFullName that takes in input an object and adds a new property to it called fullName.
 The function returns the modified version of the object. The property should combine together firstName and lastName.
 The original person object must not be changed. */
+console.log("TASK 3");
 
 const person = {
   firstName: "James",
@@ -125,7 +112,7 @@ const addFullName = (obj) => {
 
 let updatedPerson = addFullName(person);
 console.log(updatedPerson); // {firstName: 'James', lastName: 'Ensor', age: 13, fullName: 'James Ensor'} 
-console.log(person);// { firstName: 'James', lastName: 'Ensor', age: 13 }
+console.log();
 
 /* -------------------------- Task 4 --------------------------
 Given the array of product objects.
@@ -147,6 +134,7 @@ discountedPrice = price - (price * discount / 100);
 
 //NOTE: Hier mag ich die objects in dem array verändern. Daher muss ich eine deep copy erstellen, damit "products" unangetastet bleibt. 
 // structuredClone(value) erstellt eine deep copy mit allem was in dem array ist :3
+console.log("TASK 4");
 
 const products = [
   {
@@ -212,16 +200,7 @@ OUTPUT:
   }
 ]
 */
-
-console.log(products);
-/* 
-OUTPUT:
-[
-  { type: 't-shirt', price: 190, color: 'green' },
-  { type: 'jeans', price: 27, color: 'blue' },
-  { type: 'shirt', price: 32, color: 'white' }
-]
-*/
+console.log();
 
 // ------------------------- CODEDEX TASKS -------------------------
 /* 
@@ -236,6 +215,8 @@ Run a while loop until count is equal to 10. Inside the loop, set a drawNumber v
 
 Outside the loop, log a message indicating the targetNumber was drawn 10 times:
 */
+console.log("CODEDEX TASK 1");
+
 let count = 0;
 let targetNumber = Math.floor(Math.random() * 100)
 
@@ -243,13 +224,13 @@ while (count != 10) {
   let drawNumber = Math.floor(Math.random() * 100);
   if (drawNumber === targetNumber) {
     count++;
-    console.log("Match");
+    //console.log("Match");
   }
-  console.log("No Match");
+  //console.log("No Match");
 }
 
 console.log(`The number ${targetNumber} was found 10 times`);
-
+console.log();
 
 /* ------------------------------ ODD CUBES ------------------------------
 When you multiply any number three times, you're cubing it (e.g., 3³ = 3 x 3 x 3 = 27).
@@ -268,6 +249,7 @@ For example, if limit is 5, the total should be 153:
 13+33+53
 =1+27+125
 =153 */
+console.log("ODD CUBES");
 
 let limit = 5;
 let total = 0;
@@ -279,6 +261,7 @@ for (let i = 1; i <= limit; i++) {
 }
 
 console.log(total);
+console.log();
 
 /* 
 ------------------------------ DICE DOUBLE ------------------------------
@@ -302,6 +285,8 @@ Number of rolls: 1
 
 Note: Make sure to use console.log() to match the output shown above.
 */
+console.log("DICE DOUBLE");
+
 let die1 = Math.floor(Math.random() * 6) + 1;
 let die2 = Math.floor(Math.random() * 6) + 1;
 let numberOfRolls = 0;
@@ -317,6 +302,7 @@ while (die1 !== die2) {
 console.log(`Roll 1: ${die1}`);
 console.log(`Roll 2: ${die2}`);
 console.log(`Number of rolls: ${numberOfRolls}`);
+console.log();
 
 /* 
 ------------------------------ FIBONACCI SEQUENCE ------------------------------
@@ -332,7 +318,9 @@ Use a for loop to log the first 10 Fibonacci numbers.
 The first two numbers, 0 and 1, can be saved to firstFib and secondFib variables and logged directly to the console. Use a loop to generate a nextFib variable for the next Fibonacci number.
 
 Note: Inside the loop, make sure to properly reassign firstFib and secondFib after generating the next number.
-  */
+*/
+console.log("FIBONACCI SEQUENCE");
+ 
 let firstFib = 0;
 let secondFib = 1;
 console.log(firstFib);
@@ -344,6 +332,7 @@ for (let i = 1; i < 9; i++) {
   secondFib = nextFib;
   console.log(nextFib);
 }
+console.log();
 
 /* 
 ------------------------------ NITE OWL ------------------------------
@@ -357,6 +346,7 @@ Test for early bird vs. night owl with an if/else statement:
 - wakeUp is < 8, log "Early bird gets the worm! 🌅"
 - Otherwise, log "But who wants the worm? 🌃"
 */
+console.log("NITE OWL");
 
 let wakeUp = 7;
 
@@ -365,8 +355,7 @@ if (wakeUp < 8) {
 } else {
   console.log("But who wants the worm? 🌃");
 }
-
-console.clear();
+console.log();
 
 /* 
 ------------------------------ MICHELIN STARS ------------------------------
@@ -377,13 +366,12 @@ There're only 153 restaurants with 3 stars in the world. 😮
 Let's create a system to award Michelin stars.
 
 Define a rating variable as a number between 1 and 3, and log one of the following based on the number:
-
-    "🌟 is worth walking to."
-    "🌟🌟 is worth driving to."
-    "🌟🌟🌟 is worth flying to."
-    All other cases, log "Invalid."
-
+- "🌟 is worth walking to."
+- "🌟🌟 is worth driving to."
+- "🌟🌟🌟 is worth flying to."
+- All other cases, log "Invalid."
 */
+console.log("MICHELIN STARS");
 
 let rating = 2;
 
