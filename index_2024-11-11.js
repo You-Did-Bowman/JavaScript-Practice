@@ -12,6 +12,7 @@ let item = ["Egg", 0.25, 12];
 let [name, price, quantity] = item;
 
 console.log(`Item: ${name}, Quantity: ${quantity}, Price: ${price}`);
+console.log();
 
 /**
 Exercise 2
@@ -26,6 +27,7 @@ let [three, five, four, two, six, one] = numbers;
 console.log(
   `One: ${one}, Two: ${two}, Three: ${three}, Four: ${four}, Five: ${five}, Six: ${six}`
 );
+console.log();
 
 /**
 Exercise 3
@@ -45,6 +47,7 @@ let {firstName, years: age, isAdmin = user.isAdmin ? true : false } = user;
 console.log(firstName); // John
 console.log(age); // 30
 console.log(isAdmin); // false
+console.log();
 
 /**
 Exercise 4
@@ -57,6 +60,7 @@ let person = [12, "Chris", "Owen"];
 let [personAge, fName, lName ] = person;
 
 console.log(`Person - Age: ${personAge}, Name: ${fName} ${lName}`);
+console.log();
 
 /** 
 Exercise 5
@@ -71,7 +75,7 @@ let person2 = ["Chris", 12, "Owen"];
 let [nameFirst, , nameLast] = person2;
 
 console.log(`Name: ${nameFirst} ${nameLast}`);
-
+console.log();
 
 /** 
 Exercise 6
@@ -86,8 +90,7 @@ const students = ['Christina', 'Jon', 'Alexandare'];
 const [name1, name2, name3] = students;
 
 console.log(name3);
-
-console.clear();
+console.log();
 
 /**
 Exercise 7
