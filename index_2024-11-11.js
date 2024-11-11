@@ -1,3 +1,5 @@
+// Exercises from: https://gist.github.com/BenyamWorku/e5ad68e3204cf1c6b79a527fee07872e
+
 /*
 ---------------------------- Exercise 1 ----------------------------
 Rewrite the code below to use array destructuring instead of assigning each value to a variable.
@@ -11,22 +13,19 @@ let [name, price, quantity] = item;
 
 console.log(`Item: ${name}, Quantity: ${quantity}, Price: ${price}`);
 
-console.clear();
-
 /**
 Exercise 2
 Rewrite the code below to assign each number to the right variable.
 */
-/* {
-  console.log("EXERCISE 2");
+console.log("EXERCISE 2");
 
-  let numbers = [3, 5, 4, 2, 6, 1];
+let numbers = [3, 5, 4, 2, 6, 1];
 
-  let [one, two, three, four, five, six] = numbers;
+let [three, five, four, two, six, one] = numbers;
 
-  console.log(`One: ${one}, Two: ${two}, Three: ${three}, Four: ${four}, Five: ${five}, Six: ${six}`);
-  console.log();
-} */
+console.log(
+  `One: ${one}, Two: ${two}, Three: ${three}, Four: ${four}, Five: ${five}, Six: ${six}`
+);
 
 /**
 Exercise 3
@@ -36,36 +35,32 @@ Write the destructuring assignment that reads:
 - 'years' property into the variable 'age'.
 - 'isAdmin' property into the variable 'isAdmin' (false, if no such property)
 */
-/* {
-  console.log("EXERCISE 3");
+console.log("EXERCISE 3");
 
-  let user = { name: "John", years: 30 };
+let user = { firstName: "John", years: 30 };
 
-  // your code to the left side:
-  let {} = user;
+// your code to the left side:
+let {firstName, years: age, isAdmin = user.isAdmin ? true : false } = user;
 
-  console.log(name); // John
-  console.log(age); // 30
-  console.log(isAdmin); // false
-  console.log();
-} */
+console.log(firstName); // John
+console.log(age); // 30
+console.log(isAdmin); // false
+
+console.clear();
 
 /**
 Exercise 4
 Rewrite the code below to use array destructuring instead of assigning each value to a variable.
 */
-/* {
-  console.log("EXERCISE 4");
+console.log("EXERCISE 4");
 
-  let person = [12, "Chris", "Owen"];
+let person = [12, "Chris", "Owen"];
 
-  let firstName = person[1];
-  let lastName = person[2];
-  let age = person[0];
+let [personAge, fName, lName ] = person;
 
-  console.log(`Person - Age: ${age}, Name: ${firstName} ${lastName}`);
-  console.log();
-} */
+console.log(`Person - Age: ${personAge}, Name: ${fName} ${lName}`);
+
+
 
 /** 
 Exercise 5
