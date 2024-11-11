@@ -17,15 +17,17 @@ console.log(`Item: ${name}, Quantity: ${quantity}, Price: ${price}`);
 Exercise 2
 Rewrite the code below to assign each number to the right variable.
 */
-  console.log("EXERCISE 2");
+console.log("EXERCISE 2");
 
-  let numbers = [3, 5, 4, 2, 6, 1];
+let numbers = [3, 5, 4, 2, 6, 1];
 
-  let [three, five, four, two, six, one] = numbers;
+let [three, five, four, two, six, one] = numbers;
 
-  console.log(`One: ${one}, Two: ${two}, Three: ${three}, Four: ${four}, Five: ${five}, Six: ${six}`);
+console.log(
+  `One: ${one}, Two: ${two}, Three: ${three}, Four: ${four}, Five: ${five}, Six: ${six}`
+);
 
-  console.clear();
+console.clear();
 
 /**
 Exercise 3
@@ -35,19 +37,16 @@ Write the destructuring assignment that reads:
 - 'years' property into the variable 'age'.
 - 'isAdmin' property into the variable 'isAdmin' (false, if no such property)
 */
-/* {
-  console.log("EXERCISE 3");
+console.log("EXERCISE 3");
 
-  let user = { name: "John", years: 30 };
+  let user = { firstName: "John", years: 30 };
 
   // your code to the left side:
-  let {} = user;
+  let {firstName, years: age, isAdmin = user.isAdmin ? true : false } = user;
 
-  console.log(name); // John
+  console.log(firstName); // John
   console.log(age); // 30
   console.log(isAdmin); // false
-  console.log();
-} */
 
 /**
 Exercise 4
