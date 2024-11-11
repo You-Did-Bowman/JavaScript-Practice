@@ -32,11 +32,7 @@ We learn the basics like:
 
 
 ### Built With
-* Ganz viele Badges mit Technologien, die man auf meiner Seite findet
-* noch eine Technologie
-* udn noch eine
-* und noch eine
-* und erst recht diese! WOW!
+As the name of the repo describes, it only bulits with JavaScript. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -49,12 +45,19 @@ We learn the basics like:
 
 <!-- ROADMAP -->
 ## Roadmap
-Weil es ein Draft ist, macht es vielleicht Sinn hier auch die Roadmap des Portfolios festzuhalten
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+### index_2024-11-7.js 
+In this file I start with tasks on the subject of <b>shallow and deep copy</b>. We had discussed these two methods in class that day. Due to the importance of working with objects, I wanted to expand on this again that day. 
+<br><br>
+After these tasks, I completed other random tasks from Codedex. The focus here was on
+  * Math.floor() and Math.random()
+  * while-loops
+  * for-loops
+  * if-else-statements
+
+### index_2024-11-11.js
+Here I wanted to focus again on the topic of <b>destructuring</b> that I learnt today. In addition to the tasks from the lesson, I wanted to delve a little deeper into it because I realised that I need a little more practice, especially when working with arrays and destructuring, in order to understand the logic behind it. 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,8 +65,10 @@ Weil es ein Draft ist, macht es vielleicht Sinn hier auch die Roadmap des Portfo
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Judith Bohmann
+<br><br>
+Mail: ju.bohmann@gmx.de
+<br><br>
+Repo-Link: <a href="https://github.com/You-Did-Bowman/JavaScript-Practice"> github.com/You-Did-Bowman/JavaScript-Practice</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
