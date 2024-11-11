@@ -223,7 +223,7 @@ OUTPUT:
 ]
 */
 
-// ------------------------- CODEX TASKS -------------------------
+// ------------------------- CODEDEX TASKS -------------------------
 /* 
 We are running a swag raffle in the Codédex community and need to return 10 of the same number by picking random numbers between 0 - 99. 🏆
 
