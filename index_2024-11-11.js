@@ -1,3 +1,5 @@
+// Exercises from: https://gist.github.com/BenyamWorku/e5ad68e3204cf1c6b79a527fee07872e
+
 /*
 ---------------------------- Exercise 1 ----------------------------
 Rewrite the code below to use array destructuring instead of assigning each value to a variable.
@@ -11,22 +13,19 @@ let [name, price, quantity] = item;
 
 console.log(`Item: ${name}, Quantity: ${quantity}, Price: ${price}`);
 
-console.clear();
-
 /**
 Exercise 2
 Rewrite the code below to assign each number to the right variable.
 */
-/* {
   console.log("EXERCISE 2");
 
   let numbers = [3, 5, 4, 2, 6, 1];
 
-  let [one, two, three, four, five, six] = numbers;
+  let [three, five, four, two, six, one] = numbers;
 
   console.log(`One: ${one}, Two: ${two}, Three: ${three}, Four: ${four}, Five: ${five}, Six: ${six}`);
-  console.log();
-} */
+
+  console.clear();
 
 /**
 Exercise 3
