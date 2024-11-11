@@ -27,8 +27,6 @@ console.log(
   `One: ${one}, Two: ${two}, Three: ${three}, Four: ${four}, Five: ${five}, Six: ${six}`
 );
 
-console.clear();
-
 /**
 Exercise 3
 We have an object called 'user'.
@@ -39,31 +37,30 @@ Write the destructuring assignment that reads:
 */
 console.log("EXERCISE 3");
 
-  let user = { firstName: "John", years: 30 };
+let user = { firstName: "John", years: 30 };
 
-  // your code to the left side:
-  let {firstName, years: age, isAdmin = user.isAdmin ? true : false } = user;
+// your code to the left side:
+let {firstName, years: age, isAdmin = user.isAdmin ? true : false } = user;
 
-  console.log(firstName); // John
-  console.log(age); // 30
-  console.log(isAdmin); // false
+console.log(firstName); // John
+console.log(age); // 30
+console.log(isAdmin); // false
+
+console.clear();
 
 /**
 Exercise 4
 Rewrite the code below to use array destructuring instead of assigning each value to a variable.
 */
-/* {
-  console.log("EXERCISE 4");
+console.log("EXERCISE 4");
 
-  let person = [12, "Chris", "Owen"];
+let person = [12, "Chris", "Owen"];
 
-  let firstName = person[1];
-  let lastName = person[2];
-  let age = person[0];
+let [personAge, fName, lName ] = person;
 
-  console.log(`Person - Age: ${age}, Name: ${firstName} ${lastName}`);
-  console.log();
-} */
+console.log(`Person - Age: ${personAge}, Name: ${fName} ${lName}`);
+
+
 
 /** 
 Exercise 5
