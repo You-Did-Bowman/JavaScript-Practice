@@ -72,7 +72,6 @@ let [nameFirst, , nameLast] = person2;
 
 console.log(`Name: ${nameFirst} ${nameLast}`);
 
-console.clear();
 
 /** 
 Exercise 6
@@ -88,24 +87,23 @@ const [name1, name2, name3] = students;
 
 console.log(name3);
 
+console.clear();
 
 /**
 Exercise 7
 Using Array Destructuring get all of the names from this Nested Array
 Hint: https://untangled.io/in-depth-es6-destructuring-with-assembled-avengers
 */
-/* {
-  console.log("EXERCISE 7");
+console.log("EXERCISE 7");
 
-  const moreStudents = [
+const moreStudents = [
     'Chris', 
     ['Ahmad', 'Antigoni'], 
     ['Toby', 'Sam']
-  ];
+];
 
-  // Write your code here
-  const [] = moreStudents;
+// Write your code here
+const [student1, [student2, student3], [student4, student5]
+] = moreStudents;
 
-  console.log(student1, student2, student3, student4, student5);
-  console.log();
-} */
+console.log(student1, student2, student3, student4, student5);
