@@ -41,8 +41,9 @@ We learn the basics like:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Screenshots
-<img 
+![Screenshot of index_2024-11-7.js - lots of code](/images/Screenshot_index_2024-11-7.png) Screenshot of index-2024-11-7.js
 
+![Screenshot of index_2024-11-11.js - lots of code](/images/Screenshot_index_2024-11-11.png) Screenshot of index-2024-11-11.js
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
