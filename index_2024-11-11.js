@@ -46,8 +46,6 @@ console.log(firstName); // John
 console.log(age); // 30
 console.log(isAdmin); // false
 
-console.clear();
-
 /**
 Exercise 4
 Rewrite the code below to use array destructuring instead of assigning each value to a variable.
@@ -60,7 +58,7 @@ let [personAge, fName, lName ] = person;
 
 console.log(`Person - Age: ${personAge}, Name: ${fName} ${lName}`);
 
-
+console.clear();
 
 /** 
 Exercise 5
@@ -68,17 +66,14 @@ Rewrite the code below to use array destructuring instead of assigning each valu
 Make sure not to have unused variables.
 Hint: https://untangled.io/in-depth-es6-destructuring-with-assembled-avengers
 */
-/* {
-  console.log("EXERCISE 5");
+console.log("EXERCISE 5");
 
-  let person = ["Chris", 12, "Owen"];
+let person2 = ["Chris", 12, "Owen"];
 
-  let firstName = person[0];
-  let lastName = person[2];
+let [nameFirst, , nameLast] = person2;
 
-  console.log(`Name: ${firstName} ${lastName}`);
-  console.log();
-} */
+console.log(`Name: ${nameFirst} ${nameLast}`);
+
 
 /** 
 Exercise 6
