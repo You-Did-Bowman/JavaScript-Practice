@@ -58,6 +58,9 @@ After these tasks, I completed other random tasks from Codedex. The focus here w
 ### index_2024-11-11.js
 Here I wanted to focus again on the topic of <b>destructuring</b> that I learnt today. In addition to the tasks from the lesson, I wanted to delve a little deeper into it because I realised that I need a little more practice, especially when working with arrays and destructuring, in order to understand the logic behind it. 
 
+### index_2024-11-12.js
+On this day we had learnt the array methods <b>forEach()</b> and <b>map()</b> in class. In the afternoon, I then tried to use different ways of writing functions for the forEach() method in tasks. 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
