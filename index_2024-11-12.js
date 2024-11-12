@@ -84,3 +84,41 @@ const findEven = (el) => {
     }
 };
 numbers.forEach(findEven);
+
+console.log();
+
+
+/* ----------------------- Task 3 -----------------------
+
+Use forEach to capitalize the first letter of each word and log the result
+*/
+const words = ['hello', 'world', 'javascript'];
+console.log("****** TASK 3 ******");
+
+//Normal function ------------
+console.log("Normal function:");
+
+words.forEach(function(el) {
+    console.log(el[0].toUpperCase() + el.slice(1));
+})
+
+console.log();
+
+
+//Arrow function ------------
+console.log("Arrow function:");
+
+words.forEach((el) => {
+    console.log(el[0].toUpperCase() + el.slice(1));
+})
+
+console.log();
+
+
+// Pass existing function ------------
+console.log("Pass existing function:");
+
+const capitalizeWords = (el) => {
+    console.log(el[0].toUpperCase() + el.slice(1));
+}
+words.forEach(capitalizeWords);
