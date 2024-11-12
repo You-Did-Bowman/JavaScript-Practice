@@ -171,10 +171,25 @@ console.log();
 Use forEach and the multiply function to log the product of each number with 10.
 */
 function multiply(a, b) { 
-  console.log(a * b); 
+  return a * b; 
 } 
 const nums = [2, 3, 4, 5];
 console.log("****** TASK 5 ******");
 
-nums.forEach((el) => multiply(el, 10))
+//Normal function ------------
+console.log("Normal function:");
+
+nums.forEach(function(el) {
+    console.log(multiply(el, 10))
+})
+
+console.log();
+
+
+//Arrow function ------------
+console.log("Arrow function:");
+
+nums.forEach((el) => console.log(multiply(el, 10)));
+
+
 // To call multiply() for Each element inside the array it has to be triggert everytime the forEach() gets a new el. Therefore the multiply() is inside the forEach() function. You cannot pass multiply() as an existing function in the forEach() (like nums.forEach(multiply(el, 10))), because then it is only executed once - without getting the elements. 
