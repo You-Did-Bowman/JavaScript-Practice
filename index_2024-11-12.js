@@ -163,3 +163,18 @@ const showName = (el) => {
     console.log(el.name);
 };
 people1.forEach(showName);
+
+console.log();
+
+
+/* ----------------------- Task 5 -----------------------
+Use forEach and the multiply function to log the product of each number with 10.
+*/
+function multiply(a, b) { 
+  console.log(a * b); 
+} 
+const nums = [2, 3, 4, 5];
+console.log("****** TASK 5 ******");
+
+nums.forEach((el) => multiply(el, 10))
+// To call multiply() for Each element inside the array it has to be triggert everytime the forEach() gets a new el. Therefore the multiply() is inside the forEach() function. You cannot pass multiply() as an existing function in the forEach() (like nums.forEach(multiply(el, 10))), because then it is only executed once - without getting the elements. 
