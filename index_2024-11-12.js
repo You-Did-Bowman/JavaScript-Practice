@@ -122,3 +122,44 @@ const capitalizeWords = (el) => {
     console.log(el[0].toUpperCase() + el.slice(1));
 }
 words.forEach(capitalizeWords);
+
+console.log();
+
+
+/* ----------------------- Task 4 -----------------------
+
+Use forEach to log the names of only the students.
+*/
+const people1 = [
+{ name: 'Alice', age: 25, isStudent: true },
+{ name: 'Bob', age: 30, isStudent: false },
+{ name: 'Charlie', age: 28, isStudent: true }
+];
+console.log("****** TASK 4 ******");
+
+//Normal function ------------
+console.log("Normal function:");
+
+people1.forEach(function(el) {
+    console.log(el.name);
+});
+
+console.log();
+
+
+//Arrow function ------------
+console.log("Arrow function:");
+
+people1.forEach((el) => {
+    console.log(el.name);
+});
+
+console.log();
+
+// Pass existing function ------------
+console.log("Pass existing function:");
+
+const showName = (el) => {
+    console.log(el.name);
+};
+people1.forEach(showName);
