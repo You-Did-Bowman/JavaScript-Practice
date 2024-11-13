@@ -73,17 +73,15 @@ const phraseArr = phrase
   .replace(" ", "")
   .split("")
   .reduce((acc, el) => {
-// if the letter (el) is in the object (acc) the count of the letter raises 
+    // if the letter (el) is in the object (acc) the count of the letter raises
     if (acc[el]) {
-        acc[el] += 1
-// else the letter (el) get 1 as value
+      acc[el] += 1;
+      // else the letter (el) get 1 as value
     } else {
-        acc[el] = 1
+      acc[el] = 1;
     }
     return acc;
   }, {});
-
-
 
 console.log(phraseArr);
 
