@@ -61,6 +61,9 @@ Here I wanted to focus again on the topic of <b>destructuring</b> that I learnt 
 ### index_2024-11-12.js
 On this day we had learnt the array methods <b>forEach()</b> and <b>map()</b> in class. In the afternoon, I then tried to use different ways of writing functions for the forEach() method in tasks. 
 
+### index_2024-11-12.js
+In today's lesson, we discussed array methods, which are somewhat more extensive. Since I wanted to internalise the versatile application possibilities of <b>reduce()</b> even more, I solved a few tasks after the lesson that I had ChatGPT create for me. 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
