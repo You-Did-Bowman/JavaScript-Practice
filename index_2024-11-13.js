@@ -146,7 +146,7 @@ For example, your result should look like this:
   odd: [1, 3, 5, 7, 9]
 }
 */
-console.log("****** TASK 4 ******");
+console.log("****** TASK 5 ******");
 
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -163,3 +163,74 @@ const evenAndOdd = nums.reduce((acc, num) => {
 
 console.log(evenAndOdd); // { even: [ 2, 4, 6, 8, 10 ], odd: [ 1, 3, 5, 7, 9 ] }
 
+console.log();
+
+/* --------------------------- TASK 6 ---------------------------
+
+Group a list of people by their age group.
+
+const people = [
+  { name: "Alice", age: 23 },
+  { name: "Bob", age: 17 },
+  { name: "Charlie", age: 35 },
+  { name: "David", age: 15 },
+  { name: "Ella", age: 42 },
+  { name: "Frank", age: 18 }
+];
+
+Use the reduce() method to create an object that groups people into two categories:
+
+    "adults": an array of people who are 18 and older.
+    "minors": an array of people who are under 18.
+
+The result should look like this:
+
+{
+  adults: [
+    { name: "Alice", age: 23 },
+    { name: "Charlie", age: 35 },
+    { name: "Ella", age: 42 },
+    { name: "Frank", age: 18 }
+  ],
+  minors: [
+    { name: "Bob", age: 17 },
+    { name: "David", age: 15 }
+  ]
+}
+*/
+console.log("****** TASK 6 ******");
+
+const people = [
+  { name: "Alice", age: 23 },
+  { name: "Bob", age: 17 },
+  { name: "Charlie", age: 35 },
+  { name: "David", age: 15 },
+  { name: "Ella", age: 42 },
+  { name: "Frank", age: 18 },
+];
+
+const generations = people.reduce((acc, person) => {
+    if (person.age > 18) {
+        acc.adults.push(person);
+    } else {
+        acc.minors.push(person);
+    };
+    return acc;
+}, {adults: [], minors: []});
+
+console.log(generations);
+/* 
+OUTPUT:
+{
+  adults: [
+    { name: 'Alice', age: 23 },
+    { name: 'Charlie', age: 35 },
+    { name: 'Ella', age: 42 }
+  ],
+  minors: [
+    { name: 'Bob', age: 17 },
+    { name: 'David', age: 15 },
+    { name: 'Frank', age: 18 }
+  ]
+}
+*/
