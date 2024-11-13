@@ -127,3 +127,39 @@ const countWords = sentence
 
 console.log(countWords); // { the: 3, quick: 2, brown: 1, fox: 2, jumps: 1, over: 1, lazy: 1, dog: 1, was: 1 }
 
+console.log();
+
+/* --------------------------- TASK 5 ---------------------------
+
+Group numbers by whether they are even or odd.
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+Use the reduce() method to create an object with two keys, "even" and "odd", where:
+- The "even" key holds an array of all even numbers from the list.
+- The "odd" key holds an array of all odd numbers from the list.
+
+For example, your result should look like this:
+
+{
+  even: [2, 4, 6, 8, 10],
+  odd: [1, 3, 5, 7, 9]
+}
+*/
+console.log("****** TASK 4 ******");
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const evenAndOdd = nums.reduce((acc, num) => {
+// if num is even it pushes the num into the even-array
+    if (num % 2 === 0) {
+        acc.even.push(num);
+// if num is odd it pushes the num into the odd-array
+    } else {
+        acc.odd.push(num);
+    }
+    return acc;
+}, {even: [], odd: []})
+
+console.log(evenAndOdd); // { even: [ 2, 4, 6, 8, 10 ], odd: [ 1, 3, 5, 7, 9 ] }
+
