@@ -141,7 +141,9 @@ console.log("****** TASK 4 ******");
 console.log("Normal function:");
 
 people1.forEach(function(el) {
-    console.log(el.name);
+    if (el.isStudent === true) {
+        console.log(el.name);
+    };
 });
 
 console.log();
@@ -151,7 +153,9 @@ console.log();
 console.log("Arrow function:");
 
 people1.forEach((el) => {
-    console.log(el.name);
+    if (el.isStudent === true) {
+        console.log(el.name)
+    };
 });
 
 console.log();
@@ -160,7 +164,9 @@ console.log();
 console.log("Pass existing function:");
 
 const showName = (el) => {
-    console.log(el.name);
+    if (el.isStudent === true) {
+        console.log(el.name)
+    };
 };
 people1.forEach(showName);
 
