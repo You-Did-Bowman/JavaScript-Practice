@@ -83,5 +83,47 @@ const phraseArr = phrase
     return acc;
   }, {});
 
-console.log(phraseArr);
+console.log(phraseArr); // { h: 1, e: 1, l: 3, o: 2, w: 1, r: 1, d: 1 }
+
+console.log();
+
+
+/* --------------------------- TASK 4 ---------------------------
+
+Count the occurrences of each word in a sentence.
+
+const sentence = "the quick brown fox jumps over the lazy dog the fox was quick";
+
+Use the reduce() method to create an object that contains the count of each word in the sentence. The final result should look like this:
+
+{
+  the: 3,
+  quick: 2,
+  brown: 1,
+  fox: 2,
+  jumps: 1,
+  over: 1,
+  lazy: 1,
+  dog: 1,
+  was: 1
+}
+*/
+console.log("****** TASK 4 ******");
+
+const sentence = "the quick brown fox jumps over the lazy dog the fox was quick";
+
+const countWords = sentence
+// split(" ") changes every word inside the sentence to an element of an array
+.split(" ")
+// check if word is already a key inside the object (because acc is a empty object). If so we add +1 to it otherwise we create a key with the value of 1
+.reduce((acc, word) => {
+    if (acc[word]) {
+        acc[word]++;
+    } else {
+        acc[word] = 1;
+    }
+    return acc;
+}, {});
+
+console.log(countWords); // { the: 3, quick: 2, brown: 1, fox: 2, jumps: 1, over: 1, lazy: 1, dog: 1, was: 1 }
 
