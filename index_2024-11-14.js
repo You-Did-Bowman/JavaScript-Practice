@@ -43,6 +43,9 @@ if (countEvenLength > countOddLength) {
 }
 
 console.log();
+
+console.clear();
+
     
 
 /* --------------------------- TASK 2 ----------------------------- 
@@ -50,6 +53,30 @@ Write a function that reverses all the words in a sentence that start with a par
 
 specialReverse("word searches are super fun", "s")
 ➞ "word sehcraes are repus fun" */
+console.log("****** TASK 2 ******");
+
+const sentence = "word searches are super fun"
+
+const specialReverse = sentence
+.split(" ")
+.map((word) => {
+    return word.split("")
+})
+.map((word) => {
+    if (word[0] === "s") {
+        word.reverse()
+    }
+    return word;
+})
+.map((word) => {
+    return word.join("")
+})
+.reduce((acc, word) => {
+    return acc + " " +word 
+}, "")
+
+console.log(specialReverse);
+
 
 /* --------------------------- TASK 3 ----------------------------
 Take a look at the following code and describe in details (as much as you can) what the code is doing.
