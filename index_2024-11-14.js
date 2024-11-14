@@ -58,23 +58,25 @@ console.log("****** TASK 2 ******");
 const sentence = "word searches are super fun"
 
 const specialReverse = sentence
+// split the sentence into an array with every word as an item
 .split(" ")
+// map through the array
 .map((word) => {
-    return word.split("")
+    // make every letter - inside each word-item - into a letter-item
+    let wordArr = word.split("");
+    // search for "s" at the first index inside the word-items and reverse it
+    if (wordArr[0] === "s") {
+        wordArr.reverse()
+    };
+    // return the new array and join every letter-item inside the word-item
+    return wordArr.join("")
 })
-.map((word) => {
-    if (word[0] === "s") {
-        word.reverse()
-    }
-    return word;
-})
-.map((word) => {
-    return word.join("")
-})
+// reduce the items of the sentence-array so we get a string. 
 .reduce((acc, word) => {
-    return acc + " " +word 
-}, "")
+    return acc + " " + word 
+})
 
+// BOOM - MAGIC! *o*
 console.log(specialReverse);
 
 
@@ -101,8 +103,11 @@ const groupedByCity = users.reduce((accumulator, currentValue) => {
 
 console.log(groupedByCity);
 
-A - why do we need this line of code?   if (!accumulator[currentValue.city]) {
+A - why do we need this line of code?   if (!accumulator[currentValue.city])
+    - We need this to check whether this key already exists. If it does not yet exist, one will be generated. For this reason, it is also the first step in the function. 
+
 B - What if I replace "if (!accumulator[currentValue.city]) { " with  "if (!acc.hasOwnProperty(city))"?
+    - 
 C - Which of the above is the safest approach? 
 D - What is the value of the accumulator during the second iteration?  "accumulator[currentValue.city].push(currentValue)"
 E - What is happening here and why do we need that?  }, {}) */
