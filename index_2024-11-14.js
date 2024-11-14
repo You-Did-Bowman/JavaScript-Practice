@@ -107,7 +107,16 @@ A - why do we need this line of code?   if (!accumulator[currentValue.city])
     - We need this to check whether this key already exists. If it does not yet exist, one will be generated. For this reason, it is also the first step in the function. 
 
 B - What if I replace "if (!accumulator[currentValue.city]) { " with  "if (!acc.hasOwnProperty(city))"?
-    - 
+    - I guess nothing ... both would work for this task. 
+
 C - Which of the above is the safest approach? 
+    - The second one is safer for this task because it search only for the key. The first one also searchs for the value of the key.
+
 D - What is the value of the accumulator during the second iteration?  "accumulator[currentValue.city].push(currentValue)"
-E - What is happening here and why do we need that?  }, {}) */
+    - {
+        NewYork: {name: "Jake Smith", age: 20, city: "New York"}
+    }
+
+E - What is happening here and why do we need that?  }, {}) 
+    - We need the empty object to create a object in the first step. The very first step in this function is that we take an empty object and search for a key in it and add it if necessary. 
+*/
