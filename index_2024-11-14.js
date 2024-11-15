@@ -43,9 +43,6 @@ if (countEvenLength > countOddLength) {
 }
 
 console.log();
-
-console.clear();
-
     
 
 /* --------------------------- TASK 2 ----------------------------- 
