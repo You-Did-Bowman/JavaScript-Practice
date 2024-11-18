@@ -112,3 +112,40 @@ console.log(resultTask14); // great grandfather
 
 resultTask14 = generation(1, "f") ;
 console.log(resultTask14); // daugther
+
+
+// -------------------------- TASK FROM SCHOOL -------------------
+/* 
+Add a nested callback to the following code.
+
+The callback should print "take a break from <subject>"
+
+function doHomework( subject, callback ) {
+console.log(`Starting my ${subject} homework.`);
+callback( subject );
+}
+
+// Create callback
+function alertFinished( val ){
+console.log(`Finished my ${val} homework`);
+}
+
+// Trigger main function and pass callback
+doHomework('math', alertFinished);
+*/
+
+function doHomework(subject, callback) {
+  console.log(`Starting my ${subject} homework.`);
+  callback(subject);
+}
+
+function alertFinished(val) {
+    alertBreak(val);
+  console.log(`Finished my ${val} homework`);
+}
+
+function alertBreak(val) {
+    console.log(`Take a break from ${val}`); 
+}
+
+doHomework('math', alertFinished);
