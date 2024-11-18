@@ -71,3 +71,44 @@ console.log(dieRoll); // false
 
 dieRoll = possibleBonus(5, 3);
 console.log(dieRoll); // false
+
+console.log();
+
+
+/* --------------------------- WHICH GENERATION ARE YOU? ---------------------------------
+
+Try finding your ancestors and offspring with code.
+Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
+- If the number is negative, return the related ancestor.
+- If positive, return the related descendant.
+- You are generation 0. In the case of 0 (male or female), return "me!".
+
+Examples
+generation(2, "f") ➞ "granddaughter"
+generation(-3, "m") ➞ "great grandfather"
+generation(1, "f") ➞ "daughter"
+*/
+console.log("WHICH GENERATIONARE YOU?");
+
+
+const generation = (num, char) => {
+    const rescrs = {
+        "-3": { "f": "great grandmother", "m": "great grandfather" },
+        "-2": { "f": "grandmother", "m": "grandfather" },
+        "-1": { "f": "mother", "m": "father" },
+        "0": { "f": "me!", "m": "me!" },
+        "1": { "f": "daugther", "m": "son" },
+        "2": { "f": "granddaugther", "m": "grandson" },
+        "3": { "f": "great granddaugther", "m": "great grandson" },
+    };
+    return rescrs[num][char];
+};
+
+let resultTask14 = generation(2, "f");
+console.log(resultTask14); // granddaugther
+
+resultTask14 = generation(-3, "m");
+console.log(resultTask14); // great grandfather
+
+resultTask14 = generation(1, "f") ;
+console.log(resultTask14); // daugther
