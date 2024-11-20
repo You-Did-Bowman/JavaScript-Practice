@@ -177,3 +177,60 @@ accHolder.deposit(500);
 accHolder.withdraw(200);
 console.log(accHolder.accountInfo());
 
+console.log();
+
+/* -------------------- Task 4: Animal Simulator --------------------
+
+Create a class Animal with the following properties:
+- name (String)
+- species (String, e.g., Dog, Cat)
+- energy (Number, default: 100)
+
+Add methods:
+- eat(amount): Increases energy by the specified amount.
+- sleep(amount): Increases energy by twice the specified amount.
+- play(amount): Decreases energy by the specified amount but cannot go below 0.
+- status(): Returns the name, species, and current energy level.
+
+Test the class with different animals.
+*/
+console.log("**** TASK 4 ****");
+
+class Animal{
+    constructor(name, species, energy = 100) {
+        this.name = name;
+        this.species = species;
+        this.energy = energy;
+    }
+
+    eat(amount) {
+        return this.energy += amount;
+    }
+    sleep(amount) {
+        return this.energy += 2 * amount;
+    }
+    play(amount) {
+        this.energy -= amount;
+        if (this.energy < 0) {
+            this.energy = 0;
+        }
+        return this.energy;
+    }
+    status() {
+        return `name: ${this.name},  species: ${this.species}, energy level: ${this.energy}`
+    }
+}
+
+let animal1 = new Animal("Emma", "dog");
+
+
+animal1.eat(50);
+animal1.sleep(20);
+animal1.play(80);
+console.log(animal1.status());
+animal1.play(120);
+console.log(animal1.status());
+
+
+
+
