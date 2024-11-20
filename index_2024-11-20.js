@@ -131,4 +131,49 @@ library1.addBook(book4);
 
 console.log(library1.listAllBooks());
 console.log(library1.listReadBooks())
-console.log(library1);
+
+console.log();
+
+
+/* -------------------- Task 3: Bank Account --------------------
+
+Create a class BankAccount with the following properties:
+- accountHolder (String)
+- balance (Number, default: 0)
+
+Add methods:
+- deposit(amount): Increases the balance by the specified amount.
+- withdraw(amount): Decreases the balance by the specified amount but cannot result in a negative balance.
+- accountInfo(): Returns the account holder's name and current balance as a string.
+
+Create a new BankAccount object and test all methods..
+*/
+console.log("**** TASK 3 ****");
+
+class BankAccount {
+    constructor(accountHolder, balance) {
+        this.accountHolder = accountHolder;
+        this.balance = balance;
+    }
+
+    deposit(amount) {
+        return this.balance += amount;
+    }
+    withdraw(amount) {
+        this.balance -= amount;
+        if (this.balance < 0) {
+            this.balance = 0;
+        }
+        return this.balance;
+    }
+    accountInfo() {
+        return `Account holder: ${this.accountHolder}, balance: ${this.balance}€`
+    }
+}
+
+let accHolder = new BankAccount("Peter Fischer", 1000);
+
+accHolder.deposit(500);
+accHolder.withdraw(200);
+console.log(accHolder.accountInfo());
+
