@@ -34,6 +34,7 @@ You have selected pizza marinara.
 It contains tomato,oregano,garlic and costs 5.75 euros
 You paid 43 euros. Your change is 37.25
 */
+console.log("**** PIZZA TASK ****");
 
 class Pizza {
   constructor(id) {
@@ -69,9 +70,9 @@ class Pizza {
       }
   }
   print(selectedPizza){ // give pizza as param
-    console.log(`
-    You have selected ${selectedPizza.product}
-    It contains ${selectedPizza.ingredients.join(", ")} and costs ${selectedPizza.price}€
+    console.log(
+`You have selected ${selectedPizza.product}
+It contains ${selectedPizza.ingredients.join(", ")} and costs ${selectedPizza.price}€
     `);
   }
   balance(amount) {
@@ -88,7 +89,7 @@ console.log();
 
 Create a program that models a class hierarchy for animals. The base class Animal should define general properties and methods, while the derived class Dog should extend the base class and add specific properties and methods.
 
-Class Animal:
+1. Class Animal:
     Properties:
         - name (Name of the animal, string)
         - age (Age of the animal, integer)
@@ -98,7 +99,7 @@ Class Animal:
     Method description:
         - Prints a description of the animal, e.g.: "This animal is named Luna and is 5 years old.".
 
-Class Dog (extends Animal):
+2. Class Dog (extends Animal):
     Additional Property:
         - breed (Breed of the dog, string)
     Constructor:
@@ -108,6 +109,8 @@ Class Dog (extends Animal):
     Overrides the method description:
         - Prints a more detailed description, e.g.: "This dog is named Luna, is 5 years old, and belongs to the Labrador breed.".
 */
+console.log("**** ANIMAL TASK ****");
+
 class Animal {
   constructor(name, age) {
     this.name = name;
@@ -150,4 +153,93 @@ class Dog extends Animal {
 let dog = new Dog("Luna", 5, "Labrador");
 dog.description();
 
+console.log();
 
+/* ---------------------- E-COMMERCE SYSTEM WITH CLASSES ----------------------
+
+Create a system for managing products and orders in an e-commerce application. The system should include the following:
+1. Class: Product
+    Properties:
+        name (Name of the product, string)
+        price (Price of the product, number)
+        stock (Number of items available, number)
+    Constructor:
+        Initializes name, price, and stock.
+    Methods:
+        isAvailable():
+            Returns true if stock > 0, otherwise false.
+        purchase(quantity):
+            Reduces the stock by quantity if enough items are in stock.
+            Throws an error if quantity > stock.
+
+2. Class: Order
+    Properties:
+        products (An array of Product objects with quantities)
+        status (Status of the order, e.g., "Pending", "Completed")
+    Constructor:
+        Initializes products as an empty array and status as "Pending".
+    Methods:
+        addProduct(product, quantity):
+            Adds a product to the order if it's available. Calls the purchase method of Product.
+        calculateTotal():
+            Returns the total cost of the order based on the products and quantities.
+        completeOrder():
+            Changes the status to "Completed" if the order contains products.
+
+3. Static Method in Order
+    Add a static method getOrderSummary(order):
+        Returns a string summarizing the products in the order, their quantities, and the total cost.
+ */
+console.log("**** E-COMMERCE TASK ****");
+
+class Product {
+    constructor(name, price, stock) {
+        this.name = name;
+        this.price = price;
+        this.stock = stock;
+    }
+
+    isAvailable(amount) {
+        return this.stock >= amount;
+    }
+
+    purchase(quantity) {
+        if (this.isAvailable(quantity)) {
+            return this.stock -= quantity;
+        } else {
+            return "404 Error!";
+        }
+    }
+}
+
+class Order {
+    constructor(products = [], status = "Pending") {
+        this.products = products;
+        this.status = status;
+    }
+    
+    addProduct(products, quantity) {
+        if (!products.isAvailable()) {
+            // Bevor das Product in den Warenkorb kommt, muss zuerst der purchase ausgelöst werden, damit auch die Anzahl reduziert wird 
+            return this.products.push({ products, quantity});
+        } else {
+            return "404 Error!"
+        }
+    }
+
+    calculateTotal(product) {
+        //reduce() verwenden
+    }
+
+}
+ let shirts = new Product("t-shirt", 10, 5);
+ let pullover = new Product("pullover", 15, 10)
+ console.log(shirts.isAvailable(5));
+ console.log(shirts.purchase(6));
+ 
+
+ let purchase = new Order();
+
+ purchase.addProduct(shirts, 5)
+ purchase.addProduct(pullover,3)
+ console.log(purchase.calculateTotal());
