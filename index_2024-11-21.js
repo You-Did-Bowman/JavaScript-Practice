@@ -82,7 +82,74 @@ class Pizza {
 }
 
 const pizza1 = new Pizza( 2 );
-
 pizza1.balance( 43 ); 
+
+console.log();
+
+/* ---------------------- ANIMAL AND DOG CLASSES ----------------------
+
+Create a program that models a class hierarchy for animals. The base class Animal should define general properties and methods, while the derived class Dog should extend the base class and add specific properties and methods.
+
+Class Animal:
+    Properties:
+        - name (Name of the animal, string)
+        - age (Age of the animal, integer)
+    Constructor:
+        - Initializes name and age.
+        - Calls a method greet that prints the name of the animal, e.g., "Hello, I am an animal named Luna!".
+    Method description:
+        - Prints a description of the animal, e.g.: "This animal is named Luna and is 5 years old.".
+
+Class Dog (extends Animal):
+    Additional Property:
+        - breed (Breed of the dog, string)
+    Constructor:
+        - Calls the constructor of the base class Animal.
+        - Additionally initializes the property breed.
+        - Calls a method bark that prints: "Woof! I am a dog of the Labrador breed." (the breed name should be dynamic).
+    Overrides the method description:
+        - Prints a more detailed description, e.g.: "This dog is named Luna, is 5 years old, and belongs to the Labrador breed.".
+*/
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+
+    this.greet()
+  }
+
+  greet() {
+    console.log(`Hello, I am an animal named ${this.name}!`);
+  }
+
+  description() {
+    console.log(`This animal is named ${this.name} an is ${this.age}!`);
+  }
+}
+
+let pet = new Animal("Luna", 5);
+pet.description();
+
+console.log();
+
+class Dog extends Animal {
+    constructor(name, age, breed) {
+        super(name, age);
+        this.breed = breed;
+
+        this.bark();
+    }
+
+    bark() {
+        console.log(`Woof! I am a dog of the ${this.breed} breed.`);
+    }
+
+    description() {
+        console.log(`This dog is named ${this.name}, is ${this.age} years old and belongs to the ${this.breed} breed.`);
+    }
+}
+
+let dog = new Dog("Luna", 5, "Labrador");
+dog.description();
 
 
