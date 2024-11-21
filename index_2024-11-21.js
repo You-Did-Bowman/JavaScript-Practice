@@ -201,21 +201,47 @@ class Product {
         this.stock = stock;
     }
 
-    isAvailable() {
-        if (stock > 0) {
-            return true;
-        } else {
-            return false;
-        }
+    isAvailable(amount) {
+        return this.stock >= amount;
     }
+
     purchase(quantity) {
-        if (quantity < stock) {
-            return stock -= quantity;
+        if (this.isAvailable(quantity)) {
+            return this.stock -= quantity;
         } else {
-            console.log("404 Error!");
+            return "404 Error!";
         }
     }
 }
 
-cl
+class Order {
+    constructor(products = [], status = "Pending") {
+        this.products = products;
+        this.status = status;
+    }
+    
+    addProduct(products, quantity) {
+        if (!products.isAvailable()) {
+            // Bevor das Product in den Warenkorb kommt, muss zuerst der purchase ausgelöst werden, damit auch die Anzahl reduziert wird 
+            return this.products.push({ products, quantity});
+        } else {
+            return "404 Error!"
+        }
+    }
 
+    calculateTotal(product) {
+        //reduce() verwenden
+    }
+
+}
+ let shirts = new Product("t-shirt", 10, 5);
+ let pullover = new Product("pullover", 15, 10)
+ console.log(shirts.isAvailable(5));
+ console.log(shirts.purchase(6));
+ 
+
+ let purchase = new Order();
+
+ purchase.addProduct(shirts, 5)
+ purchase.addProduct(pullover,3)
+ console.log(purchase.calculateTotal());
