@@ -69,12 +69,14 @@ class Pizza {
         return this.productObj[i];
       }
   }
-  print(selectedPizza){ // give pizza as param
+  print(selectedPizza){ // will give this.pizza as param
     console.log(
 `You have selected ${selectedPizza.product}
 It contains ${selectedPizza.ingredients.join(", ")} and costs ${selectedPizza.price}€
     `);
   }
+
+  // Here is the reason why i didn't use a variable for the slected Pizza. I could not use this var inside balance() beause it would be a local var inside the construcor - as a proberty I can use it for selecting the price.
   balance(amount) {
     console.log(`You paid ${amount}€. Your change is ${amount - this.pizza.price}€`);
   }
