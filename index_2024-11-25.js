@@ -116,5 +116,45 @@ changeEnough([10, 0, 0, 50], 3.85)
 console.log();
 changeEnough([1, 0, 5, 219], 19.99) 
 
+console.log();
+
+/** ----------------------- Maskify the string ----------------------
+ * Usually when you sign up for an account to buy something, your credit card number, phone number or answer to a secret question is partially obscured in some way. Since someone could look over your shoulder, you don't want that shown on your screen. Hence, the website masks these strings.
+ * Your task is to create a function that takes a string, transforms all but the last four characters into "#" and returns the new masked string.
+ * 
+ * Examples
+ * - maskify("4556364607935616") ➞ "############5616"
+ * - maskify("64607935616") ➞ "#######5616"
+ * - maskify("1") ➞ "1"
+ * - maskify("") ➞ ""
+ * 
+ * Notes
+ * - The maskify function must accept a string of any length.
+ * - An empty string should return an empty string (fourth example above).
+*/
+console.log("*** Maskify the string ***");
+
+function maskify(string) {
+  /** Create an empty string where the masked string will bestored  */
+  let newString = "";
+  /** Search through the string to the fourth index from its end */
+  for (let i = 0; i < string.length - 4; i++) {
+    /** And replace each index with a "#" */
+    newString += "#";
+  }
+  /** Log the newString with the last 4 indexes of the orginal string */
+  console.log(newString + string.slice(string.length - 4));
+}
+
+maskify("4556364607935616")
+console.log();
+maskify("64607935616")
+console.log();
+maskify("1")
+console.log();
+maskify("")
+
+
+
 
 
