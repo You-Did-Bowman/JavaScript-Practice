@@ -61,9 +61,32 @@ Here I wanted to focus again on the topic of <b>destructuring</b> that I learnt 
 ### index_2024-11-12.js
 On this day we had learnt the array methods <b>forEach()</b> and <b>map()</b> in class. In the afternoon, I then tried to use different ways of writing functions for the forEach() method in tasks. 
 
-### index_2024-11-12.js
+### index_2024-11-13.js
 In today's lesson, we discussed array methods, which are somewhat more extensive. Since I wanted to internalise the versatile application possibilities of <b>reduce()</b> even more, I solved a few tasks after the lesson that I had ChatGPT create for me. 
 
+### index_2024-11-14.js & index_2024-11-15.js
+* .reduce()
+* .push()
+* .split()
+* .map()
+
+### index_2024-11-18.js
+Repetition of different topics:
+* for of function
+* if conditions
+* Object operations
+* callback
+
+### index_2024-11-19.js & index_2024-11-20.js
+In this exercise I programmed a Pokemon game - using <b>class</b> and <b>methods</b>.
+<br>
+There were also smaller programmes, such as a car, a library, a bank account and an animal. 
+
+### index_2024-11-21.js & index_2024-11-22.js
+These exercises start with a pizza task where I had to call a method of the class in the constructor. This was a big challenge for me. For this reason, I immediately worked on two more exercises on a similar problem. 
+
+### index_2024-11-23.js
+In a voluntary group project, I worked with classmates on a problem where we created an extended library. Which can be managed using methods. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
