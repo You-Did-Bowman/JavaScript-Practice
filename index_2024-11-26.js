@@ -80,10 +80,25 @@ const sortAfterGenre = movies.reduce((acc, el) => {
 },{})
 console.log("Sorted by Genre: ", sortAfterGenre);
 
+console.log();
 
+console.clear();
 
+/* ------------------------------ SUM OF POSITIVE NUMBER ------------------------------
 
+Given an array of numbers, use reduce() to find the sum of all positive numbers.
 
+const numbers = [3, -1, 4, -2, 5, -6, 7];
 
+Expected Output: Sum of positive numbers: 19
+*/
+console.log("*** SUM OF POSITIVE NUMBER ***");
 
+const numbers = [3, -1, 4, -2, 5, -6, 7];
+
+const posNums = numbers
+.filter((el) => el > 0)
+.reduce((acc, el) => acc + el)
+
+console.log(posNums);
 
