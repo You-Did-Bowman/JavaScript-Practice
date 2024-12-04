@@ -120,16 +120,34 @@ const flattendArray = nestedArray.reduce((acc, el) => acc.concat(el), [])
 
 console.log(flattendArray);
 
+console.log();
 
-/* 
 
-3. Count Occurrences
+/* ------------------------------ Count Occurrences ------------------------------
 
-Task: Given an array of strings, use reduce() to count the occurrences of each string.
+Given an array of strings, use reduce() to count the occurrences of each string.
 
 const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
 
 Expected Output: { apple: 3, banana: 2, orange: 1 }
+*/
+console.log("*** COUNT OCCURRENCES ***");
+
+const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+const countFruits = fruits.reduce((acc, el) => {
+  if (!acc[el]) {
+    acc[el];
+  } ;
+}, {});
+
+console.log(countFruits);
+
+
+
+
+
+/* 
 4. Find the Longest String
 
 Task: Use reduce() to find the longest string in an array.
