@@ -6,16 +6,21 @@ Example:
 */
 console.log("*** REMOVING ELEMENTS ***");
 
-let arr = ['Hello', 'Goodbye', 'Hello Again'];
-let newArr = [];
+const removeEl = (arr) => {
+  let newArr = [];
 
-for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (i % 2 === 0) {
-        console.log(newArr.push(arr[i]))
+      newArr.push(arr[i]);
     }
-}
+  }
 
-console.log(newArr);
+  return newArr;
+};
+
+console.log(removeEl(['Hello', 'Goodbye', 'Hello Again']));
+console.log(removeEl([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log(removeEl([['Goodbye'], {'Great': 'Job'}]));
 
 console.log();
 
@@ -34,13 +39,32 @@ All of the strings in the array passed to your function will be different length
 */
 console.log("*** SORT ARRAY ***");
 
-let array = ["Beg", "Life", "I", "To"];
+const sortByLength = (array) => {
+  return array.sort((a, b) => a.length - b.length);
+};
 
-let sortedArr = array.sort((a,b) => a.length - b.length)
+console.log(sortByLength(["Beg", "Life", "I", "To"]));
+console.log(sortByLength(["", "Moderately", "Brains", "Pizza"]));
+console.log(sortByLength(["Longer", "Longest", "Short"]));
 
-console.log(array.sort((a,b) => a.length - b.length));
+console.log();
 
+/* ------------------- PLURAL -------------------
+We need a simple function that determines if a plural is needed or not. It should take a number, and return true if a plural should be used with that number or false if not. This would be useful when printing out a string such as "5 minutes", "14 apples", or "1 sun".
 
+"You only need to worry about english grammar rules for this kata, where anything that isn't singular (one of something), it is plural (not one of something)."
+
+All values will be positive integers or floats, or zero.
+*/
+console.log("*** PLURAL ***");
+
+const plural = (n) => n !== 1 ? true : false;
+
+console.log(plural(0));
+console.log(plural(1));
+console.log(plural(Infinity));
+
+console.log();
 
 
 
