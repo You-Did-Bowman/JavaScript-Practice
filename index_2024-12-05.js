@@ -67,4 +67,3 @@ console.log(plural(Infinity));
 console.log();
 
 
-
