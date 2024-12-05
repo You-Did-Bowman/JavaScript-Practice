@@ -28,4 +28,28 @@ function pipeFix(numbers) {
 
 console.log(pipeFix([1,2,3,5,6,8,9]))
 
+console.log();
+
+
+/* -------------------------- Removing Elements --------------------------------
+Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+Example:
+["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+None of the arrays will be empty, so you don't have to worry about that!
+*/
+console.log("*** Removing Elements ***");
+
+const arr = ["Keep", "Remove", "Keep", "Remove", "Keep"];
+
+const newArr = [];
+
+for (let i = 0; i < arr.length; i++) {
+    if (i % 2 !== 0) {
+        newArr.push[arr[i]]
+    }
+}
+
+console.log(newArr);
 
