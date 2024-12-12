@@ -56,3 +56,21 @@ console.log(binaryArrayToNumber([0, 0, 0, 1])); // 1
 console.log(binaryArrayToNumber([0, 0, 1, 0])); // 2
 console.log(binaryArrayToNumber([1, 1, 1, 1])); // 15
 
+console.log();
+
+/* ------------------------------- 5 WITHOUT NUMBERS!! --------------------------------
+Write a function that always returns 5
+
+Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/ 
+*/
+console.log("*** 5 WITHOUT NUMBERS ***");
+
+function unusualFive() {
+    return ["a", "b", "c", "d", "e"].length;
+};
+
+console.log(unusualFive()); // 5
+
+
+
+
